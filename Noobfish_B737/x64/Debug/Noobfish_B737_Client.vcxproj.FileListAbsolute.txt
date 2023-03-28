@@ -1,0 +1,2 @@
+E:\Develop\FlightSimulator\B737_CDU\B737_CDU\x64\Debug\Noobfish_B737_Client.exe
+E:\Develop\FlightSimulator\B737_CDU\Noobfish_B737\x64\Debug\Noobfish_B737_Client.exe
