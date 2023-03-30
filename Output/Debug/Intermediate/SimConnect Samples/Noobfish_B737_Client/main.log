@@ -1,0 +1,12 @@
+﻿  Noobfish_B737_Client.cpp
+SimConnect.lib(SimConnectClient.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“0”不匹配值“2”(Noobfish_B737_Client.obj 中)
+SimConnect.lib(SimConnectClient.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MD_DynamicRelease”不匹配值“MDd_DynamicDebug”(Noobfish_B737_Client.obj 中)
+SimConnect.lib(SimConnectClient.obj) : warning LNK4099: 未找到 PDB“”(使用“SimConnect.lib(SimConnectClient.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+SimConnect.lib(commClient.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“0”不匹配值“2”(Noobfish_B737_Client.obj 中)
+SimConnect.lib(commClient.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MD_DynamicRelease”不匹配值“MDd_DynamicDebug”(Noobfish_B737_Client.obj 中)
+SimConnect.lib(commClient.obj) : warning LNK4099: 未找到 PDB“”(使用“SimConnect.lib(commClient.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+SimConnect.lib(client.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项: 值“0”不匹配值“2”(Noobfish_B737_Client.obj 中)
+SimConnect.lib(client.obj) : error LNK2038: 检测到“RuntimeLibrary”的不匹配项: 值“MD_DynamicRelease”不匹配值“MDd_DynamicDebug”(Noobfish_B737_Client.obj 中)
+SimConnect.lib(client.obj) : warning LNK4099: 未找到 PDB“”(使用“SimConnect.lib(client.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+E:\Develop\FlightSimulator\B737_CDU\Noobfish_B737_Client\Output\Debug\SimConnect Samples\Noobfish_B737_Client\Noobfish_B737_Client.exe : fatal error LNK1319: 检测到 6 个不匹配项
