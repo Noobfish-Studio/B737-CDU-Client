@@ -1,0 +1,11 @@
+﻿  p4d_windowed.cpp
+E:\Develop\FlightSimulator\B737_CDU\Noobfish_B737_Client\src\p4d_windowed\p4d_windowed.cpp(25,2): warning C4091: “static ”: 没有声明变量时忽略“DATA_REQUEST_ID”的左侧
+E:\Develop\FlightSimulator\B737_CDU\Noobfish_B737_Client\src\p4d_windowed\p4d_windowed.cpp(211,12): warning C4244: “return”: 从“WPARAM”转换到“int”，可能丢失数据
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 48 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+SimConnect.lib(SimConnectClient.obj) : warning LNK4099: 未找到 PDB“”(使用“SimConnect.lib(SimConnectClient.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+SimConnect.lib(commClient.obj) : warning LNK4099: 未找到 PDB“”(使用“SimConnect.lib(commClient.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+SimConnect.lib(client.obj) : warning LNK4099: 未找到 PDB“”(使用“SimConnect.lib(client.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+  p4d_windowed.vcxproj -> E:\Develop\FlightSimulator\B737_CDU\Noobfish_B737_Client\x64\Release\p4d_windowed.exe
