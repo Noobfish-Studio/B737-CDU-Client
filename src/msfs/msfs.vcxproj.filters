@@ -18,7 +18,7 @@
     <ClCompile Include="msfs.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\p4d\ng3_cdu.cpp">
+    <ClCompile Include="..\msfs\ng3_cdu.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
