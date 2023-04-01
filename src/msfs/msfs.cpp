@@ -9,10 +9,8 @@
 
 #pragma comment(lib, "..\\..\\lib\\MSFS\\SimConnect.lib")
 
-bool requestCDUData();
 
 int main() {
-	requestCDUData();
 	NG3_run();
 	return 0;
 }
