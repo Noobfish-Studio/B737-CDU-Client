@@ -1,4 +1,4 @@
-#include <windows.h>
+﻿#include <windows.h>
 #include <tchar.h>
 #include <iostream>
 #include <strsafe.h>
@@ -20,9 +20,10 @@ bool NG3_LogoLightSwitch = false;
 bool NG3_run()
 {
     HRESULT hr;
+    SetConsoleOutputCP(CP_UTF8);
     if (SUCCEEDED(SimConnect_Open(&hSimConnect, "NG3_CDU", NULL, 0, 0, 0)))
     {
-        printf("\n成功连接到模拟器!");
+        printf("\nSuccessfully Connected!");
 
         // 关联ID与PMDG数据区名称
         hr = SimConnect_MapClientDataNameToID(hSimConnect, PMDG_NG3_DATA_NAME, PMDG_NG3_DATA_ID);
@@ -116,7 +117,12 @@ bool NG3_run()
         // 订阅模拟器启动或航空器切换事件
         hr = SimConnect_SubscribeToSystemEvent(hSimConnect, EVENT_SIM_START, "SimStart");
 
-        
+        // 屏幕初始化(?)
+        NG3_pressButton(EVENT_CDU_L_BRITENESS);
+        SimConnect_TransmitClientEvent(hSimConnect, 0, EVENT_CDU_L_BRITENESS, MOUSE_FLAG_RIGHTSINGLE,
+            SIMCONNECT_GROUP_PRIORITY_HIGHEST, SIMCONNECT_EVENT_FLAG_GROUPID_IS_PRIORITY);
+        SimConnect_TransmitClientEvent(hSimConnect, 0, EVENT_CDU_L_BRITENESS, MOUSE_FLAG_RIGHTRELEASE,
+            SIMCONNECT_GROUP_PRIORITY_HIGHEST, SIMCONNECT_EVENT_FLAG_GROUPID_IS_PRIORITY);
 
         // 主循环
         while (quit == 0)
@@ -130,7 +136,7 @@ bool NG3_run()
         return 1;
     }
     else {
-        printf("\n模拟器连接失败");
+        printf("\nConnection Failed!");
         return 0;
     }
 }
@@ -176,8 +182,6 @@ void CALLBACK NoobFishDispatchProc(SIMCONNECT_RECV* pData, DWORD cbData, void* p
                 case EVENT_SIM_START:
                 {
                     HRESULT hr = SimConnect_RequestSystemState(hSimConnect, AIR_PATH_REQUEST, "AircraftLoaded");
-                    NG3_pressButton(EVENT_CDU_L_CLR);
-                    NG3_pressButton(EVENT_CDU_L_0);
                     break;
                 }
             }
@@ -259,7 +263,9 @@ void test_NG3_ScreenOutput(PMDG_NG3_CDU_Screen_Inversed* screen, bool print_char
     for (int i = 0; i < CDU_ROWS; i++) {
         for (int j = 0; j < CDU_COLUMNS; j++) {
             if (print_char)
-                std::cout << (screen->Cells[i][j].Symbol);
+            {
+                    std::cout << (screen->Cells[i][j].Symbol);
+            }    
             else
                 std::cout << (int)screen->Cells[i][j].Symbol << ' ';
         }
