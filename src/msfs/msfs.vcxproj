@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\p4d\ng3_cdu.cpp" />
+    <ClCompile Include="..\msfs\ng3_cdu.cpp" />
     <ClCompile Include="msfs.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
